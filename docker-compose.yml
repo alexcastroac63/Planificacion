@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mrp-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mrp-planificacion-app:latest
+    container_name: mrp-planificacion-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:80"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:80/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

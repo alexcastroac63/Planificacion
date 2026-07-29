@@ -1,0 +1,6 @@
+{
+  "name": "Grid de Planificación MRP & SCM",
+  "description": "Sistema empresarial de planificación de materiales (MRP) con cuadrícula de 24 semanas, gestión de proveedores, órdenes de compra y arquitectura de microservicios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
